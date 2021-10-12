@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>
+    product searched = {{searchstring}}
+</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>S.No</th>
+    <th>Product Name</th>
+    <th>price</th>
+    <th>Customer Name</th>
+    <th>Rating</th>
+    <th>Commenthead</th>
+    <th>Comment</th>
+  </tr>
+    {% for review in reviews %}
+  <tr>
+    <td>{{review['sno']}}</td>
+    <td>{{review['productname']}}</td>
+    <td>{{review['price']}}</td>
+    <td>{{review['name']}}</td>
+    <td>{{review['rating']}}</td>
+    <td>{{review['commenthead']}}</td>
+    <td>{{review['comment']}}</td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+
